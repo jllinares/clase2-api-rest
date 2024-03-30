@@ -12,7 +12,6 @@ class Command(BaseCommand):
     def handle(self, *args: Any, **options: Any):
         self.stdout.write('Esperando por la BD..')
         db_up = False
-        
         while db_up is False:
             try:
                 self.check(databases=['default'])
